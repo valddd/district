@@ -40,39 +40,39 @@ module.exports = {
         if (!args[0]) {
             message.channel.send({embeds:[
                 new MessageEmbed()
-                    .setTitle("📬 Need help? Here are all of my commands(Make Sure to Give the Bot Admin perms to use all features):")
+                    .setTitle("📬 Besoin d'aide ? Toutes mes commandes:")
                     .addFields(
                         {
                             name: "⚙ Administration",
-                            value: "```" + prefix + " help administration```",
+                            value: "```" + prefix + "help administration```",
                         },
                         {
                             name: "🎮 Fun",
-                            value: "```" + prefix + " help fun```",
+                            value: "```" + prefix + "help fun```",
                         },
                         {
                             name: "📜 Levels",
-                            value: "```" + prefix + " help levels```",
+                            value: "```" + prefix + "help levels```",
                         },
                         {
                             name: "🔒 Owner",
-                            value: "```" + prefix + " help owner```",
+                            value: "```" + prefix + "help owner```",
                         },
                         {
                             name: "🛠 Utility",
-                            value: "```" + prefix + " help utility```",
+                            value: "```" + prefix + "help utility```",
                         },
                         {
                             name: ":frame_photo: Images",
-                            value: "```" + prefix + " help images```",
+                            value: "```" + prefix + "help images```",
                         },
                         {
                             name: ":video_game: GameInfo",
-                            value: "```" + prefix + " help gameinfo```",
+                            value: "```" + prefix + "help gameinfo```",
                         }
                     )
                     .setDescription(
-                        `Use \`${prefix} help\` followed by a command name to get more additional information on a command. For example: \`${prefix} help ban\`.`
+                        `Utilisez \`${prefix} help\` suivi du nom d'une commande pour en savoir plus. Par exemple: \`${prefix} help ban\`.`
                     )
                     .setImage(image)
                     .setColor("#2F3136")
@@ -99,13 +99,13 @@ module.exports = {
                 var  listOfEmbed = [];
                 if (categories.length <= 1) {
                     const a = new MessageEmbed()
-                        .setTitle("📬 Need help? Here are all of my commands:")
+                        .setTitle("📬 Besoin d'aide ? Toutes mes commandes:")
                         .addFields(temp)
                         .setDescription(
-                            `Use \`${prefix} help\` followed by a command name to get more additional information on a command. For example: \`${prefix} help ban\`.`
+                            `Utilisez \`${prefix} help\` suivi du nom d'une commande pour en savoir plus. Par exemple: \`${prefix} help ban\`.`
                         )
                         .setFooter(
-                            `Requested by ${message.author.tag}`,
+                            `Demandé par ${message.author.tag}`,
                             message.author.displayAvatarURL({
                                 dynamic: true,
                             })
@@ -118,14 +118,14 @@ module.exports = {
                         listOfEmbed.push(
                             new MessageEmbed()
                                 .setTitle(
-                                    "📬 Need help? Here are all of my commands:"
+                                    "📬 Besoin d'aide ? Toutes mes commandes:"
                                 )
                                 .addFields(categories[i])
                                 .setDescription(
-                                    `Use \`${prefix} help\` followed by a command name to get more additional information on a command. For example: \`${prefix} help ban\`.`
+                                    `Utilisez \`${prefix} help\` suivi du nom d'une commande pour en savoir plus. Par exemple: \`${prefix} help ban\`.`
                                 )
                                 .setFooter(
-                                    `Requested by ${message.author.tag}`,
+                                    `Demandé par ${message.author.tag}`,
                                     message.author.displayAvatarURL({
                                         dynamic: true,
                                     })
@@ -151,26 +151,26 @@ module.exports = {
                 if (!command) {
                     const embed = new MessageEmbed()
                         .setTitle(
-                            `Invalid command! Use \`${prefix}help\` for all of my commands!`
+                            `Commande invalide ! Utilisez \`${prefix}help\` pour voir mes commandes.`
                         )
                         .setColor("FF0000");
                     return message.channel.send({embeds:[embed]});
                 }
 
                 const embed = new MessageEmbed()
-                    .setTitle("Command Details:")
+                    .setTitle("Détails Commande:")
                     .addField("PREFIX:", `\`${prefix}\``)
                     .addField(
                         "COMMAND:",
                         command.name
                             ? `\`${command.name}\``
-                            : "No name for this command."
+                            : "Aucun nom pour cette commande."
                     )
                     .addField(
                         "ALIASES:",
                         command.aliases
                             ? `\`${command.aliases.join("` `")}\``
-                            : "No aliases for this command."
+                            : "Aucun aliases pour cette commande."
                     )
                     .addField(
                         "USAGE:",
@@ -182,10 +182,10 @@ module.exports = {
                         "DESCRIPTION:",
                         command.description
                             ? command.description
-                            : "No description for this command."
+                            : "Aucune description pour cette commande."
                     )
                     .setFooter(
-                        `Requested by ${message.author.tag}`,
+                        `Demandé par ${message.author.tag}`,
                         message.author.displayAvatarURL({ dynamic: true })
                     )
                     .setTimestamp()
