@@ -5,17 +5,17 @@ const schema = require("../schemas/Guild");
 const token = process.env.token;
 let prefix = process.env.prefix;
 const reactionMenu = require("discordv13-pagination")
-const image = `https://cdn.discordapp.com/attachments/867151384703795241/867465639262027776/bot_long_banner.png`
+const image = `https://cdn.discordapp.com/attachments/945812190936584233/1013103343687712841/19_69.gif`
 
 
 
 module.exports = {
     name: "help",
-    description: "Shows all available bot commands.",
+    description: "Affiche toutes les commandes du bot.",
     async execute(message, args, client) {
 
         if(!message.guild.me.permissions.has('SEND_MESSAGES')){
-            return message.channel.send({content:':x: You need to give me the send messages permissions to use this command.'})
+            return message.channel.send({content:":x: J'ai besoin des permissions d'envoyer des messages pour utiliser cette commande."})
         }
         await schema.findOne(
             { guildID: message.guild.id },
