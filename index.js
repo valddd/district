@@ -512,10 +512,10 @@ fs.readdirSync("./slashcmd/").forEach((dir) => {
 
   //Bot Activity List
   const arrayOfStatus = [
-    `bebou wza :kiss:`,
-    `suce wza`,
-    `run Valdlpb`,
-    "/help for slash commands",
+    `.gg/district`,
+    `[+] Protect`,
+    `run +help`,
+    "/help pour les commandes slash",
   ];
 
 
