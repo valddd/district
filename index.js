@@ -524,7 +524,7 @@ fs.readdirSync("./slashcmd/").forEach((dir) => {
   setInterval(() => {
     if (index == arrayOfStatus.length) index = 0;
     const status = arrayOfStatus[index];
-    client.user.setActivity('Helping Out', { type: 'WATCHING' }); //Set to Watching Prescence
+    client.user.setActivity('District Protect', { type: 'PLAYING' }); //Set to Watching Prescence
     client.user.setPresence({ activities: [{ name: status }], status: 'dnd' }); //Set Do Not Disturb Status
     index++;
   }, 5000);
